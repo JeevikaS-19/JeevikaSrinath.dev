@@ -1,0 +1,600 @@
+[
+    {
+        "id": "hand-gesture-drawing",
+        "title": "Hand Gesture Drawing App",
+        "role": "Lead Developer",
+        "description": "A real-time computer vision tool that maps spatial coordinates between hands to create dynamic vector lines.",
+        "tech_stack": [
+            "Python",
+            "OpenCV",
+            "MediaPipe"
+        ],
+        "thumbnail": "/images/hand-draw-thumb.jpg",
+        "links": {
+            "repo": "",
+            "live": ""
+        },
+        "blueprint": {
+            "flow_description": "Coordinate mapping from Landmark #8 (Index Tip) to OpenCV line rendering.",
+            "nodes": [
+                {
+                    "id": "1",
+                    "type": "input",
+                    "position": {
+                        "x": 0,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Webcam Feed"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
+                },
+                {
+                    "id": "2",
+                    "type": "default",
+                    "position": {
+                        "x": 250,
+                        "y": 50
+                    },
+                    "data": {
+                        "label": "MediaPipe Landmark Detection"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "3",
+                    "type": "default",
+                    "position": {
+                        "x": 500,
+                        "y": 150
+                    },
+                    "data": {
+                        "label": "Isolate Index Tip (#8)"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "4",
+                    "type": "output",
+                    "position": {
+                        "x": 750,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "cv2.line Vectoring"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 160px;"
+                }
+            ],
+            "edges": [
+                {
+                    "id": "e1-2",
+                    "source": "1",
+                    "target": "2",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e2-3",
+                    "source": "2",
+                    "target": "3",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                },
+                {
+                    "id": "e3-4",
+                    "source": "3",
+                    "target": "4",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                }
+            ]
+        },
+        "gallery": [
+            {
+                "url": "/images/hand-draw-demo.gif",
+                "caption": "Real-time Vector Tracking"
+            }
+        ]
+    },
+    {
+        "id": "gesture-accumulator",
+        "title": "Gesture Stability Accumulator",
+        "role": "Lead Developer",
+        "description": "An intelligent counter that uses temporal stability filters to process noisy sensor data into stable numerical inputs.",
+        "tech_stack": [
+            "Python",
+            "OpenCV",
+            "MediaPipe",
+            "Logic State Management"
+        ],
+        "thumbnail": "/images/counter-thumb.jpg",
+        "links": {
+            "repo": "",
+            "live": ""
+        },
+        "blueprint": {
+            "flow_description": "3-Frame buffer logic ensuring gesture stability before data accumulation.",
+            "nodes": [
+                {
+                    "id": "1",
+                    "type": "input",
+                    "position": {
+                        "x": 0,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Hand Detection"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
+                },
+                {
+                    "id": "2",
+                    "type": "default",
+                    "position": {
+                        "x": 250,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Finger Count Logic"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 160px;"
+                },
+                {
+                    "id": "3",
+                    "type": "default",
+                    "position": {
+                        "x": 500,
+                        "y": 50
+                    },
+                    "data": {
+                        "label": "Stability Buffer (3 Frames)"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "4",
+                    "type": "output",
+                    "position": {
+                        "x": 750,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Global Sum Accumulator"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
+                }
+            ],
+            "edges": [
+                {
+                    "id": "e1-2",
+                    "source": "1",
+                    "target": "2",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e2-3",
+                    "source": "2",
+                    "target": "3",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                },
+                {
+                    "id": "e3-4",
+                    "source": "3",
+                    "target": "4",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                }
+            ]
+        },
+        "gallery": [
+            {
+                "url": "/images/counter-demo.gif",
+                "caption": "Stable Count Processing"
+            }
+        ]
+    },
+    {
+        "id": "air-drawing-canvas",
+        "title": "Air Drawing Canvas",
+        "role": "Lead Developer",
+        "description": "An AR-style drawing interface using hand gestures for tool switching, erasing, and canvas management.",
+        "tech_stack": [
+            "Python",
+            "OpenCV",
+            "NumPy",
+            "MediaPipe"
+        ],
+        "thumbnail": "/images/air-draw-thumb.jpg",
+        "links": {
+            "repo": "",
+            "live": ""
+        },
+        "blueprint": {
+            "flow_description": "State-machine logic mapping specific hand gestures to canvas operations.",
+            "nodes": [
+                {
+                    "id": "1",
+                    "type": "input",
+                    "position": {
+                        "x": 0,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Gesture Recognition"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
+                },
+                {
+                    "id": "2",
+                    "type": "default",
+                    "position": {
+                        "x": 250,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Decision: Draw / Erase / Clear"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 220px;"
+                },
+                {
+                    "id": "3",
+                    "type": "default",
+                    "position": {
+                        "x": 550,
+                        "y": 50
+                    },
+                    "data": {
+                        "label": "NumPy Array Canvas"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "4",
+                    "type": "output",
+                    "position": {
+                        "x": 800,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Weighted Frame Overlay"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 200px;"
+                }
+            ],
+            "edges": [
+                {
+                    "id": "e1-2",
+                    "source": "1",
+                    "target": "2",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e2-3",
+                    "source": "2",
+                    "target": "3",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                },
+                {
+                    "id": "e3-4",
+                    "source": "3",
+                    "target": "4",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                }
+            ]
+        },
+        "gallery": [
+            {
+                "url": "/images/canvas-demo.gif",
+                "caption": "Gesture-Controlled Painting"
+            }
+        ]
+    },
+    {
+        "id": "sudoku-recursive-solver",
+        "title": "Recursive Sudoku Engine",
+        "role": "Algorithm Engineer",
+        "description": "A high-performance backtracking algorithm that solves any valid Sudoku puzzle through depth-first search.",
+        "tech_stack": [
+            "Python (Standard Library)"
+        ],
+        "thumbnail": "/images/sudoku-thumb.jpg",
+        "links": {
+            "repo": "",
+            "live": ""
+        },
+        "blueprint": {
+            "flow_description": "Recursive backtracking loop: Place -> Validate -> Recursion or Backtrack.",
+            "nodes": [
+                {
+                    "id": "1",
+                    "type": "input",
+                    "position": {
+                        "x": 0,
+                        "y": 150
+                    },
+                    "data": {
+                        "label": "Find Empty Cell"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
+                },
+                {
+                    "id": "2",
+                    "type": "default",
+                    "position": {
+                        "x": 250,
+                        "y": 150
+                    },
+                    "data": {
+                        "label": "Iterate 1-9"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 140px;"
+                },
+                {
+                    "id": "3",
+                    "type": "default",
+                    "position": {
+                        "x": 450,
+                        "y": 150
+                    },
+                    "data": {
+                        "label": "Constraint Check"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
+                },
+                {
+                    "id": "4",
+                    "type": "output",
+                    "position": {
+                        "x": 700,
+                        "y": 150
+                    },
+                    "data": {
+                        "label": "Backtrack (Undo)"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 160px;"
+                }
+            ],
+            "edges": [
+                {
+                    "id": "e1-2",
+                    "source": "1",
+                    "target": "2",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e2-3",
+                    "source": "2",
+                    "target": "3",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                },
+                {
+                    "id": "e3-4",
+                    "source": "3",
+                    "target": "4",
+                    "label": "Invalid",
+                    "animated": false,
+                    "style": "stroke: #ef4444; stroke-dasharray: 5,5;"
+                },
+                {
+                    "id": "e3-1",
+                    "source": "3",
+                    "target": "1",
+                    "label": "Valid",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                }
+            ]
+        },
+        "gallery": [
+            {
+                "url": "/images/sudoku-cli.jpg",
+                "caption": "CLI Solution Display"
+            }
+        ]
+    },
+    {
+        "id": "emptydatfridge",
+        "title": "EmptyDatFridge",
+        "role": "Full Stack Developer",
+        "description": "A recipe discovery engine that optimizes household food waste by matching available ingredients to professional recipes.",
+        "tech_stack": [
+            "SvelteKit",
+            "Tailwind CSS",
+            "Recipe API",
+            "Google Search Console"
+        ],
+        "thumbnail": "/images/fridge-thumb.jpg",
+        "links": {
+            "repo": "https://github.com/JeevikaS-19/FlavorGenie.git",
+            "live": "https://emptydatfridge.com/"
+        },
+        "blueprint": {
+            "flow_description": "Ingredient parsing logic to API query matching.",
+            "nodes": [
+                {
+                    "id": "1",
+                    "type": "input",
+                    "position": {
+                        "x": 0,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "User Ingredient Input"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "2",
+                    "type": "default",
+                    "position": {
+                        "x": 250,
+                        "y": 50
+                    },
+                    "data": {
+                        "label": "Search Logic & Filtering"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "3",
+                    "type": "default",
+                    "position": {
+                        "x": 500,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "API Fetch"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 140px;"
+                },
+                {
+                    "id": "4",
+                    "type": "output",
+                    "position": {
+                        "x": 700,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Dynamic Recipe Cards"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
+                }
+            ],
+            "edges": [
+                {
+                    "id": "e1-2",
+                    "source": "1",
+                    "target": "2",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e2-3",
+                    "source": "2",
+                    "target": "3",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                },
+                {
+                    "id": "e3-4",
+                    "source": "3",
+                    "target": "4",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                }
+            ]
+        },
+        "gallery": [
+            {
+                "url": "/images/fridge-live.jpg",
+                "caption": "Recipe Landing Page"
+            }
+        ]
+    },
+    {
+        "id": "scrapbook",
+        "title": "Scrapbook",
+        "role": "Lead UI/UX Developer",
+        "description": "A Gen Z inspired digital photobooth featuring vintage filters, sticker overlays, and a scrapbook layout editor.",
+        "tech_stack": [
+            "React/Svelte",
+            "CSS Filters",
+            "Canvas API"
+        ],
+        "thumbnail": "/images/scrapbook-thumb.jpg",
+        "links": {
+            "repo": "https://github.com/JeevikaS-19/scrapbook.git",
+            "live": "https://scrapbook-azure.vercel.app/"
+        },
+        "blueprint": {
+            "flow_description": "Digital darkroom processing from raw image to aesthetic scrapbook page.",
+            "nodes": [
+                {
+                    "id": "1",
+                    "type": "input",
+                    "position": {
+                        "x": 0,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Webcam Capture"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
+                },
+                {
+                    "id": "2",
+                    "type": "default",
+                    "position": {
+                        "x": 250,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Aesthetic Filter Layer"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "3",
+                    "type": "default",
+                    "position": {
+                        "x": 500,
+                        "y": 50
+                    },
+                    "data": {
+                        "label": "Drag-and-Drop Stickers"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "4",
+                    "type": "output",
+                    "position": {
+                        "x": 750,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Final Scrapbook Export"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
+                }
+            ],
+            "edges": [
+                {
+                    "id": "e1-2",
+                    "source": "1",
+                    "target": "2",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e2-3",
+                    "source": "2",
+                    "target": "3",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                },
+                {
+                    "id": "e3-4",
+                    "source": "3",
+                    "target": "4",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                }
+            ]
+        },
+        "gallery": [
+            {
+                "url": "/images/scrapbook-ui.jpg",
+                "caption": "The 'Red Light' Filter View"
+            }
+        ]
+    }
+]
