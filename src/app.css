@@ -1,4 +1,6 @@
 @import '@fontsource/jetbrains-mono';
+@import '@fontsource/inter';
+@import '@fontsource/gloria-hallelujah';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,13 +10,14 @@
 }
 
 body {
-  background-color: theme('colors.blueprint.dark'); /* #0d0d0d */
+  background-color: theme('colors.blueprint.dark');
+  /* #0d0d0d */
   color: theme('colors.blueprint.text');
   font-family: theme('fontFamily.mono');
   /* Minimalist Grid Pattern */
-  background-image: 
-      linear-gradient(to right, #222 1px, transparent 1px),
-      linear-gradient(to bottom, #222 1px, transparent 1px);
+  background-image:
+    linear-gradient(to right, #222 1px, transparent 1px),
+    linear-gradient(to bottom, #222 1px, transparent 1px);
   background-size: 40px 40px;
   min-height: 100vh;
 }
@@ -24,13 +27,16 @@ body {
   width: 8px;
   height: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #0d0d0d;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #2a9d8f; 
+  background: #2a9d8f;
   border: 1px solid #0d0d0d;
 }
+
 ::-webkit-scrollbar-corner {
   background: #0d0d0d;
 }

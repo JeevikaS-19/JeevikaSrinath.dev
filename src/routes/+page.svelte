@@ -11,10 +11,17 @@
     <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-4 text-white">
       JEEVIKA SRINATH<span class="text-blueprint-blue">.DEV</span>
     </h1>
-    <p class="text-xl md:text-2xl text-gray-400 max-w-2xl border-l-2 border-blueprint-gold pl-6">
-      &lt;FrontendArchitect /&gt; <br>
-      Building code-first digital blueprints.
-    </p>
+    <div class="max-w-3xl mt-6 border-l-4 border-blueprint-gold pl-6 py-2">
+        <p class="font-hand text-3xl text-blueprint-gold mb-3 -rotate-2 inline-block">
+            Hello!
+        </p>
+        <p class="font-sans text-lg md:text-xl text-gray-300 leading-relaxed font-bold">
+            CS student (9.77 CGPA) building at the intersection of <span class="text-white">AI logic</span> and <span class="text-blueprint-blue">Neo-Brutalist design</span>. Whether I’m engineering CV tools in Python or shipping interactive frontends in Svelte, I focus on turning complex ideas into clean, high-impact products.
+        </p>
+        <p class="font-sans text-sm text-blueprint-blue mt-4 font-bold uppercase tracking-widest">
+            Always building, always shipping.
+        </p>
+    </div>
   </header>
 
   <!-- Projects Grid -->

@@ -14,6 +14,8 @@ export default {
             },
             fontFamily: {
                 mono: ['"JetBrains Mono"', 'monospace'],
+                hand: ['"Gloria Hallelujah"', 'cursive'],
+                sans: ['"Inter"', 'sans-serif'],
             },
             borderRadius: {
                 DEFAULT: '0px',
