@@ -1,6 +1,9 @@
 <script lang="ts">
 	import '../app.css';
     import { onMount } from 'svelte';
+    import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+
+    injectSpeedInsights();
 
     let mounted = false;
     onMount(() => {
