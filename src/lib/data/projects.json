@@ -596,5 +596,312 @@
                 "caption": "The 'Red Light' Filter View"
             }
         ]
+    },
+    {
+        "id": "pacman-python",
+        "title": "Pac-Man Game",
+        "role": "Game Developer",
+        "description": "A classic arcade simulation built using Python and Pygame. The project focuses on game loop management, collision detection, and basic AI pathfinding for ghosts.",
+        "tech_stack": [
+            "Python",
+            "Pygame",
+            "AI Pathfinding"
+        ],
+        "thumbnail": "/images/pacman-thumb.jpg",
+        "links": {
+            "repo": "",
+            "live": ""
+        },
+        "blueprint": {
+            "flow_description": "Game loop cycle managing entity updates, collision checks, and AI state transitions.",
+            "nodes": [
+                {
+                    "id": "1",
+                    "type": "input",
+                    "position": {
+                        "x": 0,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Game Loop"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 140px;"
+                },
+                {
+                    "id": "2",
+                    "type": "default",
+                    "position": {
+                        "x": 200,
+                        "y": 50
+                    },
+                    "data": {
+                        "label": "Tile Map Parser"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 160px;"
+                },
+                {
+                    "id": "3",
+                    "type": "default",
+                    "position": {
+                        "x": 200,
+                        "y": 150
+                    },
+                    "data": {
+                        "label": "Entity Manager"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 160px;"
+                },
+                {
+                    "id": "4",
+                    "type": "default",
+                    "position": {
+                        "x": 450,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Collision System"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
+                },
+                {
+                    "id": "5",
+                    "type": "output",
+                    "position": {
+                        "x": 700,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Ghost AI (State Machine)"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 200px;"
+                }
+            ],
+            "edges": [
+                {
+                    "id": "e1-2",
+                    "source": "1",
+                    "target": "2",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e1-3",
+                    "source": "1",
+                    "target": "3",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e2-4",
+                    "source": "2",
+                    "target": "4",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                },
+                {
+                    "id": "e3-4",
+                    "source": "3",
+                    "target": "4",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                },
+                {
+                    "id": "e4-5",
+                    "source": "4",
+                    "target": "5",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                }
+            ]
+        },
+        "gallery": []
+    },
+    {
+        "id": "architect-bot",
+        "title": "Architect Bot",
+        "role": "AI Engineer",
+        "description": "An AI-powered design-to-code tool that utilizes Computer Vision to analyze hand-drawn wireframes and Gemini API to generate clean, stylized digital mockups.",
+        "tech_stack": [
+            "Python",
+            "OpenCV",
+            "Gemini API",
+            "Generative AI"
+        ],
+        "thumbnail": "/images/architect-thumb.jpg",
+        "links": {
+            "repo": "",
+            "live": ""
+        },
+        "blueprint": {
+            "flow_description": "Transformation pipeline: Sketch -> CV Analysis -> Layout Mapping -> Generative Code.",
+            "nodes": [
+                {
+                    "id": "1",
+                    "type": "input",
+                    "position": {
+                        "x": 0,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Hand-Drawn Sketch"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "2",
+                    "type": "default",
+                    "position": {
+                        "x": 250,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Shape Detection (CV)"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "3",
+                    "type": "default",
+                    "position": {
+                        "x": 500,
+                        "y": 50
+                    },
+                    "data": {
+                        "label": "Layout Grid Mapper"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "4",
+                    "type": "output",
+                    "position": {
+                        "x": 750,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Gemini Generator"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
+                }
+            ],
+            "edges": [
+                {
+                    "id": "e1-2",
+                    "source": "1",
+                    "target": "2",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e2-3",
+                    "source": "2",
+                    "target": "3",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                },
+                {
+                    "id": "e3-4",
+                    "source": "3",
+                    "target": "4",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                }
+            ]
+        },
+        "gallery": []
+    },
+    {
+        "id": "squash-sensei",
+        "title": "Squash Sensei",
+        "role": "CV Engineer",
+        "description": "A sports-analytics tool built with MediaPipe to analyze player habits and movement efficiency on a squash court via pose estimation.",
+        "tech_stack": [
+            "Python",
+            "MediaPipe",
+            "OpenCV",
+            "Data Analytics"
+        ],
+        "thumbnail": "/images/squash-thumb.jpg",
+        "links": {
+            "repo": "",
+            "live": ""
+        },
+        "blueprint": {
+            "flow_description": "Data pipeline processing video feed into T-Position heatmaps and stroke classification logs.",
+            "nodes": [
+                {
+                    "id": "1",
+                    "type": "input",
+                    "position": {
+                        "x": 0,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Court Video Feed"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
+                },
+                {
+                    "id": "2",
+                    "type": "default",
+                    "position": {
+                        "x": 250,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "MediaPipe Pose (33 LM)"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 200px;"
+                },
+                {
+                    "id": "3",
+                    "type": "default",
+                    "position": {
+                        "x": 550,
+                        "y": 50
+                    },
+                    "data": {
+                        "label": "T-Position Heatmap"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "4",
+                    "type": "output",
+                    "position": {
+                        "x": 550,
+                        "y": 150
+                    },
+                    "data": {
+                        "label": "Stroke Classifier"
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
+                }
+            ],
+            "edges": [
+                {
+                    "id": "e1-2",
+                    "source": "1",
+                    "target": "2",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e2-3",
+                    "source": "2",
+                    "target": "3",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                },
+                {
+                    "id": "e2-4",
+                    "source": "2",
+                    "target": "4",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                }
+            ]
+        },
+        "gallery": []
     }
 ]
