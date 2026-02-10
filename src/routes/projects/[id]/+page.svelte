@@ -24,7 +24,7 @@
   $: if ($page.params.id) forceCenter(); // Re-run when switching projects
 </script>
 
-<div class="min-h-screen flex flex-col">
+<div class="min-h-screen flex flex-col bg-blueprint-dark">
   <!-- Top Bar -->
   <div class="border-b border-blueprint-grid bg-blueprint-dark/90 backdrop-blur sticky top-0 z-20">
     <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -43,8 +43,8 @@
     <div class="lg:col-span-1 space-y-8">
       {#if project}
         <div>
-          <h1 class="text-4xl font-bold text-white mb-2">{project.title}</h1>
-          <p class="text-blueprint-gold text-lg mb-6">{project.role}</p>
+          <h1 class="text-4xl font-bold text-white mb-2 italic tracking-tight">{project.title}</h1>
+          <p class="text-blueprint-gold text-lg mb-6 uppercase tracking-widest font-bold">{project.role}</p>
           <div class="h-px bg-blueprint-grid w-full mb-6"></div>
           <p class="text-gray-400 leading-relaxed font-light">
             {project.description}
@@ -52,10 +52,10 @@
         </div>
 
         <div>
-          <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-4">Tech Stack</h3>
+          <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-4 font-bold">// Technical_Stack</h3>
           <div class="flex flex-wrap gap-2">
             {#each project.tech_stack as tech}
-              <div class="border border-blueprint-blue/30 text-blueprint-blue px-3 py-1 text-xs">
+              <div class="border border-blueprint-blue/30 text-blueprint-blue px-3 py-1 text-xs font-mono bg-blueprint-blue/5">
                 {tech}
               </div>
             {/each}
@@ -64,16 +64,18 @@
 
         {#if project.links.repo || project.links.live}
         <div>
-          <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-4">External Links</h3>
-          <div class="flex gap-4">
+          <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-4 font-bold">// External_Links</h3>
+          <div class="flex flex-col gap-3">
               {#if project.links.repo}
-                <a href={project.links.repo} target="_blank" class="text-white hover:text-blueprint-gold underline decoration-1 underline-offset-4">
-                  View Source
+                <a href={project.links.repo} target="_blank" class="group flex items-center gap-2 text-white hover:text-blueprint-gold transition-colors">
+                  <span class="text-blueprint-gold group-hover:translate-x-1 transition-transform">→</span>
+                  <span class="underline decoration-1 underline-offset-4">View Source</span>
                 </a>
               {/if}
               {#if project.links.live}
-                <a href={project.links.live} target="_blank" class="text-white hover:text-blueprint-gold underline decoration-1 underline-offset-4">
-                  Live Demo
+                <a href={project.links.live} target="_blank" class="group flex items-center gap-2 text-white hover:text-blueprint-gold transition-colors">
+                  <span class="text-blueprint-gold group-hover:translate-x-1 transition-transform">→</span>
+                  <span class="underline decoration-1 underline-offset-4">Live Demo</span>
                 </a>
               {/if}
           </div>
@@ -87,7 +89,6 @@
     </div>
 
     <!-- Right Column: The Lab (Svelte Flow) -->
-    <!-- Wrapper kept relative for positioning labels, but styles removed to respect user's inner box -->
     <div class="lg:col-span-2 relative">
       <div class="absolute top-0 left-0 bg-blueprint-blue text-black text-xs font-bold px-2 py-1 z-10">
         SYSTEM_FLOW
@@ -116,37 +117,13 @@
       
       {#if project}
       <div class="absolute bottom-4 left-4 max-w-md bg-black/80 p-4 border border-blueprint-grid text-xs text-gray-300 pointer-events-none z-20">
-        <span class="text-blueprint-gold block mb-1">LOGIC_TRACE:</span>
+        <span class="text-blueprint-gold block mb-1 font-bold">LOGIC_TRACE:</span>
         {project.blueprint?.flow_description || 'Tracing logic flow...'}
       </div>
       {/if}
     </div>
 
   </main>
-
-  <!-- Visual Trace Gallery -->
-  {#if project?.gallery && project.gallery.length > 0}
-    <section class="max-w-7xl mx-auto w-full px-4 mb-20">
-      <div class="flex items-center justify-between mb-8">
-        <h2 class="text-sm font-bold tracking-widest text-blueprint-blue uppercase">
-          // Visual_Trace
-        </h2>
-        <div class="h-px bg-blueprint-grid flex-1 ml-4"></div>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {#each project.gallery as item}
-          <div class="group relative border border-blueprint-grid bg-blueprint-dark">
-             <img src={item.url} alt={item.caption} class="w-full h-64 object-cover filter grayscale hover:grayscale-0 transition-all duration-500 opacity-80 hover:opacity-100" />
-             
-             <div class="absolute bottom-0 left-0 right-0 bg-black/80 p-2 border-t border-blueprint-grid translate-y-full group-hover:translate-y-0 transition-transform">
-               <p class="text-xs text-blueprint-gold font-mono">> {item.caption}</p>
-             </div>
-          </div>
-        {/each}
-      </div>
-    </section>
-  {/if}
 </div>
 
 <style>
@@ -154,5 +131,8 @@
   .blueprint-container {
     display: block !important;
     position: relative;
+  }
+  :global(body) {
+    background-color: #0d0d0d;
   }
 </style>
