@@ -39,4 +39,5 @@ export interface Project {
     categories: string[];
     blueprint: ProjectBlueprint;
     gallery: any[];
+    full_report?: string;
 }

@@ -147,6 +147,32 @@
         {project.blueprint?.flow_description || 'Tracing logic flow...'}
       </div>
       {/if}
+
+      {#if project?.full_report}
+        <div class="mt-8 bg-blueprint-dark border border-blueprint-grid p-8 relative overflow-hidden">
+          <!-- Decorative bits -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blueprint-blue/5 -rotate-45 translate-x-16 -translate-y-16"></div>
+          
+          <div class="flex items-center gap-3 mb-6 border-b border-blueprint-grid pb-4">
+            <div class="w-2 h-2 bg-blueprint-gold animate-pulse"></div>
+            <h2 class="text-sm font-bold tracking-widest text-blueprint-gold uppercase">
+              // RESEARCH_REPORT_ANALYSIS
+            </h2>
+          </div>
+
+          <div class="prose prose-invert max-w-none">
+            <div class="whitespace-pre-wrap font-sans text-gray-300 leading-relaxed text-sm">
+              {project.full_report}
+            </div>
+          </div>
+
+          <!-- Bottom marker -->
+          <div class="mt-8 pt-4 border-t border-blueprint-grid flex justify-between items-center text-[10px] font-mono text-gray-500 uppercase">
+            <span>Security_Level: Classified</span>
+            <span>Ref_ID: {project.id}-REPORT</span>
+          </div>
+        </div>
+      {/if}
     </div>
 
   </main>

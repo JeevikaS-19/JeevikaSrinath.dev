@@ -1147,7 +1147,8 @@
                     "style": "stroke: #e9c46a;"
                 }
             ]
-        }
+        },
+        "full_report": "Report 1: The McLaren Framework\nProject Title: Operational Synchronicity: Applying F1 Telemetry Logic to System Architecture Status: Ongoing Research / Technical Paper\nFocus: Industrial Optimization & Concurrency\n\n1. Executive Summary\nThis research investigates the transition of Formula 1 \"Race Operations\" logic into high-consequence software environments. The study focuses on how McLaren’s use of sub-second telemetry loops and pit-stop synchronization can be abstracted to solve resource-blocking in multi-threaded computing systems.\n\n2. Research Focus\n* The Pit-Stop Analogy: Developing a framework where system updates or \"maintenance windows\" are treated as F1 pit stops—high-speed, synchronized, and zero-error.\n* Telemetry Integration: Implementing real-time feedback loops that adjust system parameters dynamically, similar to how an F1 car adjusts engine mapping based on live track data.\n\n3. Methodology (The Flow)\n1. Extraction: Identifying core \"Race Logic\" variables from McLaren Applied case studies.\n2. Mapping: Translating mechanical \"pit-stop\" variables into software \"uptime\" parameters.\n3. Simulated Execution: Testing the logic against high-load data environments.\n4. Optimization: Finalizing the \"Telemetry-to-Task\" (T2T) architecture."
     },
     {
         "id": "cyber-evolution",
@@ -1267,7 +1268,8 @@
                     "style": "stroke: #e9c46a;"
                 }
             ]
-        }
+        },
+        "full_report": "Report 2: Cybersecurity Evolution & Morphology\nProject Title: The Vulnerability Matrix: A Predictive Model for Morphological Cyber-Threats Status: Deep-Dive Analysis / Simulation Project\nFocus: Security Architecture & Threat Modeling\n\n1. Executive Summary\nThis paper charts the DNA of cybersecurity vulnerabilities from legacy exploits to modern AI-driven intrusions. The core research identifies a \"Morphological Gap\"—a space where existing security frameworks fail to adapt as quickly as the threats themselves.\n\n2. Research Focus\n* Lifecycle Mapping: Tracking the evolution of \"Buffer Overflow\" and \"Injection\" attacks into sophisticated, AI-automated social engineering and API exploits.\n* The Simulation Model: Development of a proactive defense environment that uses historical exploit data to predict the next logical move of a threat actor.\n\n3. Methodology (The Flow)\n1. Historical Audit: Data collection from CVE databases (2020-2026).\n2. Gap Analysis: Identifying \"Blind Spots\" in current Zero-Trust architectures.\n3. Simulation: Running \"Red Team\" scripts in a controlled environment to observe vulnerability adaptation.\n4. Defense Protocol: Drafting a \"Proactive Resistance\" framework."
     },
     {
         "id": "vibe-coding",
@@ -1387,6 +1389,7 @@
                     "style": "stroke: #e9c46a;"
                 }
             ]
-        }
+        },
+        "full_report": "Report 3: The Vibe Coding Audit\nProject Title: The Pseudo-Code Trap: Security Auditing in Intent-Based Development Status: Methodology Development / Best Practices Paper\nFocus: Human-AI Interaction & Secure Engineering\n\n1. Executive Summary\nAs development shifts toward \"Vibe Coding\" (natural language intent), the risk of \"Pseudo-code Traps\" increases. This research audits the security integrity of AI-generated code, focusing on how developers can maintain professional standards while utilizing high-speed AI tools.\n\n2. Research Focus\n* The \"Vibe\" Verification: Designing a verification layer that sits between the LLM output and the production environment.\n* Clean Vibe Checklist: A proprietary set of 12 security checkpoints designed to catch hallucinated vulnerabilities, hardcoded secrets, and inefficient logic before deployment.\n\n3. Methodology (The Flow)\n1. Intent Input: Documenting the \"Prompt to Code\" ratio in modern dev workflows.\n2. Trap Identification: Manually auditing 50+ AI-generated components for common security anti-patterns.\n3. Checklist Integration: Applying the \"Clean Vibe\" filters to the workflow.\n4. Final Validation: Benchmarking the security score of audited code vs. raw AI output."
     }
 ]
