@@ -3,6 +3,7 @@
         "id": "hand-gesture-drawing",
         "title": "Hand Gesture Drawing App",
         "role": "Lead Developer",
+        "category": "Python projects",
         "description": "A real-time computer vision tool that maps spatial coordinates between hands to create dynamic vector lines.",
         "tech_stack": [
             "Python",
@@ -25,7 +26,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Webcam Feed"
+                        "label": "Webcam Feed",
+                        "details": "Captures raw video frames at 30FPS using OpenCV's VideoCapture module."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
                 },
@@ -37,7 +39,8 @@
                         "y": 50
                     },
                     "data": {
-                        "label": "MediaPipe Landmark Detection"
+                        "label": "MediaPipe Landmark Detection",
+                        "details": "Processes frames to identify 21 3D hand landmarks using pre-trained ML models."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
                 },
@@ -49,7 +52,8 @@
                         "y": 150
                     },
                     "data": {
-                        "label": "Isolate Index Tip (#8)"
+                        "label": "Isolate Index Tip (#8)",
+                        "details": "Filters landmark data to focus exclusively on the X/Y coordinates of the index finger tip."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
                 },
@@ -61,7 +65,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "cv2.line Vectoring"
+                        "label": "cv2.line Vectoring",
+                        "details": "Draws continuous lines between sequential coordinates on a persistent digital canvas."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 160px;"
                 }
@@ -95,6 +100,7 @@
         "id": "gesture-accumulator",
         "title": "Gesture Stability Accumulator",
         "role": "Lead Developer",
+        "category": "Python projects",
         "description": "An intelligent counter that uses temporal stability filters to process noisy sensor data into stable numerical inputs.",
         "tech_stack": [
             "Python",
@@ -118,7 +124,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Hand Detection"
+                        "label": "Hand Detection",
+                        "details": "Initial detection of hand presence and orientation in the frame."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
                 },
@@ -130,7 +137,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Finger Count Logic"
+                        "label": "Finger Count Logic",
+                        "details": "Analyzes the relative positions of finger tips to base joints to determine count."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 160px;"
                 },
@@ -142,7 +150,8 @@
                         "y": 50
                     },
                     "data": {
-                        "label": "Stability Buffer (3 Frames)"
+                        "label": "Stability Buffer (3 Frames)",
+                        "details": "Requires the same count for 3 consecutive frames before triggering an update."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
                 },
@@ -154,7 +163,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Global Sum Accumulator"
+                        "label": "Global Sum Accumulator",
+                        "details": "Updates a global state variable with the validated finger count increment."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
                 }
@@ -188,6 +198,7 @@
         "id": "air-drawing-canvas",
         "title": "Air Drawing Canvas",
         "role": "Lead Developer",
+        "category": "Python projects",
         "description": "An AR-style drawing interface using hand gestures for tool switching, erasing, and canvas management.",
         "tech_stack": [
             "Python",
@@ -211,7 +222,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Gesture Recognition"
+                        "label": "Gesture Recognition",
+                        "details": "Classifies hand shapes (e.g., closed fist, open palm) into control signals."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
                 },
@@ -223,7 +235,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Decision: Draw / Erase / Clear"
+                        "label": "Decision: Draw / Erase / Clear",
+                        "details": "Logic branch that dictates which NumPy operation to apply to the pixel matrix."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 220px;"
                 },
@@ -235,7 +248,8 @@
                         "y": 50
                     },
                     "data": {
-                        "label": "NumPy Array Canvas"
+                        "label": "NumPy Array Canvas",
+                        "details": "A 2D matrix representing the drawing surface where values are modified in real-time."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
                 },
@@ -247,7 +261,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Weighted Frame Overlay"
+                        "label": "Weighted Frame Overlay",
+                        "details": "Blends the drawn canvas with the live webcam feed using cv2.addWeighted."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 200px;"
                 }
@@ -281,6 +296,7 @@
         "id": "sudoku-recursive-solver",
         "title": "Recursive Sudoku Engine",
         "role": "Algorithm Engineer",
+        "category": "Python projects",
         "description": "A high-performance backtracking algorithm that solves any valid Sudoku puzzle through depth-first search.",
         "tech_stack": [
             "Python (Standard Library)"
@@ -301,7 +317,8 @@
                         "y": 150
                     },
                     "data": {
-                        "label": "Find Empty Cell"
+                        "label": "Find Empty Cell",
+                        "details": "Scans the grid for the first zero-value cell to begin the trial process."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
                 },
@@ -313,7 +330,8 @@
                         "y": 150
                     },
                     "data": {
-                        "label": "Iterate 1-9"
+                        "label": "Iterate 1-9",
+                        "details": "Cycles through possible numbers for the current cell as candidate solutions."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 140px;"
                 },
@@ -325,7 +343,8 @@
                         "y": 150
                     },
                     "data": {
-                        "label": "Constraint Check"
+                        "label": "Constraint Check",
+                        "details": "Verifies if the candidate number violates row, column, or 3x3 grid rules."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
                 },
@@ -337,7 +356,8 @@
                         "y": 150
                     },
                     "data": {
-                        "label": "Backtrack (Undo)"
+                        "label": "Backtrack (Undo)",
+                        "details": "Resets the cell if no number fits and returns to the previous recursion depth."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 160px;"
                 }
@@ -380,6 +400,7 @@
         "id": "emptydatfridge",
         "title": "EmptyDatFridge",
         "role": "Full Stack Developer",
+        "category": "Websites",
         "description": "A recipe discovery engine that optimizes household food waste by matching available ingredients to professional recipes.",
         "tech_stack": [
             "SvelteKit",
@@ -403,7 +424,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "User Ingredient Input"
+                        "label": "User Ingredient Input",
+                        "details": "Accepts comma-separated text or selected tags representing pantry items."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
                 },
@@ -415,7 +437,8 @@
                         "y": 50
                     },
                     "data": {
-                        "label": "Search Logic & Filtering"
+                        "label": "Search Logic & Filtering",
+                        "details": "Processes input strings into optimized search terms for external API consumption."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
                 },
@@ -427,7 +450,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "API Fetch"
+                        "label": "API Fetch",
+                        "details": "Asynchronous request to recipe database returning JSON payloads of matching dishes."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 140px;"
                 },
@@ -439,7 +463,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Dynamic Recipe Cards"
+                        "label": "Dynamic Recipe Cards",
+                        "details": "Renders returned data into responsive UI components with images and health labels."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
                 }
@@ -473,6 +498,7 @@
         "id": "scrapbook",
         "title": "Scrapbook",
         "role": "Lead UI/UX Developer",
+        "category": "Websites",
         "description": "A Gen Z inspired digital photobooth featuring vintage filters, sticker overlays, and a scrapbook layout editor.",
         "tech_stack": [
             "React/Svelte",
@@ -495,7 +521,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Webcam Capture"
+                        "label": "Webcam Capture",
+                        "details": "Interfaces with standard browser navigator.mediaDevices for live video stream."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
                 },
@@ -507,7 +534,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Aesthetic Filter Layer"
+                        "label": "Aesthetic Filter Layer",
+                        "details": "Applies custom CSS filters (grain, sepia, high contrast) via React component wrappers."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
                 },
@@ -519,7 +547,8 @@
                         "y": 50
                     },
                     "data": {
-                        "label": "Drag-and-Drop Stickers"
+                        "label": "Drag-and-Drop Stickers",
+                        "details": "Uses absolute positioning and event listeners to allow free-form layout editing."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
                 },
@@ -531,7 +560,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Final Scrapbook Export"
+                        "label": "Final Scrapbook Export",
+                        "details": "Converts the DOM state into a downloadable image using html2canvas logic."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
                 }
@@ -565,6 +595,7 @@
         "id": "pacman-python",
         "title": "Pac-Man Game",
         "role": "Game Developer",
+        "category": "Python projects",
         "description": "A classic arcade simulation built using Python and Pygame. The project focuses on game loop management, collision detection, and basic AI pathfinding for ghosts.",
         "tech_stack": [
             "Python",
@@ -587,7 +618,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Game Loop"
+                        "label": "Game Loop",
+                        "details": "The core infinite while loop that controls timing (FPS) and event handling."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 140px;"
                 },
@@ -599,7 +631,8 @@
                         "y": 50
                     },
                     "data": {
-                        "label": "Tile Map Parser"
+                        "label": "Tile Map Parser",
+                        "details": "Translates text-based grid representations into coordinate-based barrier objects."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 160px;"
                 },
@@ -611,7 +644,8 @@
                         "y": 150
                     },
                     "data": {
-                        "label": "Entity Manager"
+                        "label": "Entity Manager",
+                        "details": "Tracks position, velocity, and state for Pac-Man and all four ghost entities."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 160px;"
                 },
@@ -623,7 +657,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Collision System"
+                        "label": "Collision System",
+                        "details": "Detects overlaps between pixel-based rectangles to trigger game events like death or scoring."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
                 },
@@ -635,7 +670,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Ghost AI (State Machine)"
+                        "label": "Ghost AI (State Machine)",
+                        "details": "Controls movement logic based on current state: Chase, Scatter, or Frightened."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 200px;"
                 }
@@ -683,6 +719,7 @@
         "id": "architect-bot",
         "title": "Architect Bot",
         "role": "AI Engineer",
+        "category": "On going",
         "description": "An AI-powered design-to-code tool that utilizes Computer Vision to analyze hand-drawn wireframes and Gemini API to generate clean, stylized digital mockups.",
         "tech_stack": [
             "Python",
@@ -706,7 +743,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Hand-Drawn Sketch"
+                        "label": "Hand-Drawn Sketch",
+                        "details": "Input image of wireframes drawn on paper or whiteboard."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
                 },
@@ -718,7 +756,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Shape Detection (CV)"
+                        "label": "Shape Detection (CV)",
+                        "details": "Uses contour detection to identify bounding boxes for buttons, images, and text areas."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
                 },
@@ -730,7 +769,8 @@
                         "y": 50
                     },
                     "data": {
-                        "label": "Layout Grid Mapper"
+                        "label": "Layout Grid Mapper",
+                        "details": "Aligns detected shapes to a flexible grid system to maintain spatial relationships."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
                 },
@@ -742,7 +782,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Gemini Generator"
+                        "label": "Gemini Generator",
+                        "details": "Sends coordinates and layout data to Gemini API to produce modern Tailwind/HTML code."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
                 }
@@ -776,6 +817,7 @@
         "id": "squash-sensei",
         "title": "Squash Sensei",
         "role": "CV Engineer",
+        "category": "On going",
         "description": "A sports-analytics tool built with MediaPipe to analyze player habits and movement efficiency on a squash court via pose estimation.",
         "tech_stack": [
             "Python",
@@ -799,7 +841,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Court Video Feed"
+                        "label": "Court Video Feed",
+                        "details": "Fixed-angle video recording of a squash match."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
                 },
@@ -811,7 +854,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "MediaPipe Pose (33 LM)"
+                        "label": "MediaPipe Pose (33 LM)",
+                        "details": "Real-time keypoint extraction for the player's skeleton to track movement."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 200px;"
                 },
@@ -823,7 +867,8 @@
                         "y": 50
                     },
                     "data": {
-                        "label": "T-Position Heatmap"
+                        "label": "T-Position Heatmap",
+                        "details": "Aggregates player positions over time to visualize court coverage efficiency."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
                 },
@@ -835,7 +880,8 @@
                         "y": 150
                     },
                     "data": {
-                        "label": "Stroke Classifier"
+                        "label": "Stroke Classifier",
+                        "details": "Heuristic model that identifies backhands and forehands based on joint angles."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
                 }
@@ -869,6 +915,7 @@
         "id": "bluetooth-messenger",
         "title": "Bluetooth Messenger",
         "role": "Full Stack Developer",
+        "category": "Python projects",
         "description": "A secure, cross-platform Bluetooth messaging application for Android and Windows. Features RAM-only storage with 5-minute auto-deletion for enhanced privacy.",
         "tech_stack": [
             "Python",
@@ -892,7 +939,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "Bluetooth Scan"
+                        "label": "Bluetooth Scan",
+                        "details": "Discovers nearby Bluetooth-enabled devices using PyBluez inquiries."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
                 },
@@ -904,7 +952,8 @@
                         "y": 50
                     },
                     "data": {
-                        "label": "PIN Authentication"
+                        "label": "PIN Authentication",
+                        "details": "Enforces a common 6-digit PIN shared between host and client for connection security."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 160px;"
                 },
@@ -916,7 +965,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "RAM Message Buffer"
+                        "label": "RAM Message Buffer",
+                        "details": "Stores incoming and outgoing strings in system memory to avoid disk forensics."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 160px;"
                 },
@@ -928,7 +978,8 @@
                         "y": 100
                     },
                     "data": {
-                        "label": "5-Min Auto Eraser"
+                        "label": "5-Min Auto Eraser",
+                        "details": "A timed thread that purges localized buffers to maintain high privacy standards."
                     },
                     "style": "background: #0d0d0d; border: 1px solid #ef4444; color: #fff; width: 160px;"
                 }

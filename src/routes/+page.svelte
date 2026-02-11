@@ -3,6 +3,11 @@
   import type { Project } from '$lib/types';
 
   const projects: Project[] = projectsData as Project[];
+  
+  const categories = ["Python projects", "Websites", "On going"] as const;
+  let selectedCategory: typeof categories[number] = "Python projects";
+
+  $: filteredProjects = projects.filter(p => p.category === selectedCategory);
 </script>
 
 <div class="max-w-7xl mx-auto px-4 py-16">
@@ -24,17 +29,29 @@
     </div>
   </header>
 
+  <!-- Filter Tabs -->
+  <nav class="mb-12 flex flex-wrap gap-4 border-b border-blueprint-grid pb-6">
+    {#each categories as category}
+      <button 
+        on:click={() => selectedCategory = category}
+        class="px-6 py-2 border {selectedCategory === category ? 'border-blueprint-blue bg-blueprint-blue/10 text-white' : 'border-blueprint-grid text-gray-400 hover:border-gray-500'} transition-all text-xs font-bold tracking-widest uppercase"
+      >
+        {category}
+      </button>
+    {/each}
+  </nav>
+
   <!-- Projects Grid -->
   <section>
     <div class="flex items-center justify-between mb-8">
       <h2 class="text-sm font-bold tracking-widest text-blueprint-blue uppercase">
-        // Project_Index
+        // {selectedCategory.replace(' ', '_').toUpperCase()}
       </h2>
       <div class="h-px bg-blueprint-grid flex-1 ml-4"></div>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {#each projects as project}
+      {#each filteredProjects as project (project.id)}
         <a href="/projects/{project.id}" class="group block relative h-full">
           <!-- Card Container -->
           <div class="h-full bg-blueprint-dark border border-blueprint-grid hover:border-blueprint-blue transition-colors duration-300 p-6 flex flex-col">

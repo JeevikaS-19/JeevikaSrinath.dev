@@ -6,11 +6,33 @@
   import projects from '$lib/data/projects.json';
 
   // 1. Reactive data: Updates whenever the URL ID changes
-  $: project = projects.find(p => p.id === $page.params.id);
+  $: project = projects.find(p => p.id === $page.params.id) as any;
   $: nodes = project?.blueprint?.nodes || [];
   $: edges = project?.blueprint?.edges || [];
 
+  let expandedNodeId: string | null = null;
   let flowInstance: any;
+
+  $: displayNodes = nodes.map((node: any) => {
+    const isExpanded = node.id === expandedNodeId;
+    return {
+      ...node,
+      data: {
+        ...node.data,
+        label: isExpanded ? `${node.data.label}\n\n${node.data.details || ''}` : node.data.label
+      },
+      style: node.style + (isExpanded ? 'height: auto; min-height: 140px; z-index: 50; white-space: pre-wrap; font-size: 11px; line-height: 1.5; padding: 15px !important;' : '')
+    };
+  });
+
+  function handleNodeClick(event: any) {
+    const node = event.detail.node;
+    if (expandedNodeId === node.id) {
+      expandedNodeId = null;
+    } else {
+      expandedNodeId = node.id;
+    }
+  }
 
   // 2. The "Double-Tick" Fix: Forces the map to center only AFTER the browser paints
   async function forceCenter() {
@@ -21,7 +43,10 @@
   }
 
   onMount(() => forceCenter());
-  $: if ($page.params.id) forceCenter(); // Re-run when switching projects
+  $: if ($page.params.id) {
+    expandedNodeId = null; // Reset expansion when switching projects
+    forceCenter();
+  }
 </script>
 
 <div class="min-h-screen flex flex-col bg-blueprint-dark">
@@ -98,9 +123,10 @@
         <div class="blueprint-container" style="width: 100%; height: 600px; background: #0a0a0a; border: 1px solid #222;">
           {#if project}
             <SvelteFlow 
-              {nodes} 
+              nodes={displayNodes} 
               {edges} 
               on:init={(e) => flowInstance = e.detail.instance}
+              on:nodeclick={handleNodeClick}
               fitView
               colorMode="dark"
             >

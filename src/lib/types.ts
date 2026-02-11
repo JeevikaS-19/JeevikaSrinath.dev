@@ -36,6 +36,7 @@ export interface Project {
     tech_stack: string[];
     thumbnail: string;
     links: ProjectLink;
+    category: "Python projects" | "Websites" | "On going";
     blueprint: ProjectBlueprint;
     gallery: any[];
 }
