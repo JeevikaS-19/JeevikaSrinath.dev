@@ -3,7 +3,9 @@
         "id": "hand-gesture-drawing",
         "title": "Hand Gesture Drawing App",
         "role": "Lead Developer",
-        "category": "Python projects",
+        "categories": [
+            "Python projects"
+        ],
         "description": "A real-time computer vision tool that maps spatial coordinates between hands to create dynamic vector lines.",
         "tech_stack": [
             "Python",
@@ -100,7 +102,9 @@
         "id": "gesture-accumulator",
         "title": "Gesture Stability Accumulator",
         "role": "Lead Developer",
-        "category": "Python projects",
+        "categories": [
+            "Python projects"
+        ],
         "description": "An intelligent counter that uses temporal stability filters to process noisy sensor data into stable numerical inputs.",
         "tech_stack": [
             "Python",
@@ -198,7 +202,9 @@
         "id": "air-drawing-canvas",
         "title": "Air Drawing Canvas",
         "role": "Lead Developer",
-        "category": "Python projects",
+        "categories": [
+            "Python projects"
+        ],
         "description": "An AR-style drawing interface using hand gestures for tool switching, erasing, and canvas management.",
         "tech_stack": [
             "Python",
@@ -296,7 +302,9 @@
         "id": "sudoku-recursive-solver",
         "title": "Recursive Sudoku Engine",
         "role": "Algorithm Engineer",
-        "category": "Python projects",
+        "categories": [
+            "Python projects"
+        ],
         "description": "A high-performance backtracking algorithm that solves any valid Sudoku puzzle through depth-first search.",
         "tech_stack": [
             "Python (Standard Library)"
@@ -400,7 +408,9 @@
         "id": "emptydatfridge",
         "title": "EmptyDatFridge",
         "role": "Full Stack Developer",
-        "category": "Websites",
+        "categories": [
+            "Websites"
+        ],
         "description": "A recipe discovery engine that optimizes household food waste by matching available ingredients to professional recipes.",
         "tech_stack": [
             "SvelteKit",
@@ -498,7 +508,9 @@
         "id": "scrapbook",
         "title": "Scrapbook",
         "role": "Lead UI/UX Developer",
-        "category": "Websites",
+        "categories": [
+            "Websites"
+        ],
         "description": "A Gen Z inspired digital photobooth featuring vintage filters, sticker overlays, and a scrapbook layout editor.",
         "tech_stack": [
             "React/Svelte",
@@ -595,7 +607,9 @@
         "id": "pacman-python",
         "title": "Pac-Man Game",
         "role": "Game Developer",
-        "category": "Python projects",
+        "categories": [
+            "Python projects"
+        ],
         "description": "A classic arcade simulation built using Python and Pygame. The project focuses on game loop management, collision detection, and basic AI pathfinding for ghosts.",
         "tech_stack": [
             "Python",
@@ -719,7 +733,9 @@
         "id": "architect-bot",
         "title": "Architect Bot",
         "role": "AI Engineer",
-        "category": "On going",
+        "categories": [
+            "On going"
+        ],
         "description": "An AI-powered design-to-code tool that utilizes Computer Vision to analyze hand-drawn wireframes and Gemini API to generate clean, stylized digital mockups.",
         "tech_stack": [
             "Python",
@@ -817,7 +833,9 @@
         "id": "squash-sensei",
         "title": "Squash Sensei",
         "role": "CV Engineer",
-        "category": "On going",
+        "categories": [
+            "On going"
+        ],
         "description": "A sports-analytics tool built with MediaPipe to analyze player habits and movement efficiency on a squash court via pose estimation.",
         "tech_stack": [
             "Python",
@@ -915,7 +933,9 @@
         "id": "bluetooth-messenger",
         "title": "Bluetooth Messenger",
         "role": "Full Stack Developer",
-        "category": "Python projects",
+        "categories": [
+            "Python projects"
+        ],
         "description": "A secure, cross-platform Bluetooth messaging application for Android and Windows. Features RAM-only storage with 5-minute auto-deletion for enhanced privacy.",
         "tech_stack": [
             "Python",
@@ -1005,6 +1025,366 @@
                     "target": "4",
                     "animated": true,
                     "style": "stroke: #ef4444;"
+                }
+            ]
+        }
+    },
+    {
+        "id": "mclaren-strategy",
+        "title": "The McLaren Strategy",
+        "role": "Strategic Researcher",
+        "categories": [
+            "Research",
+            "On going"
+        ],
+        "description": "An investigative research project analyzing the transferability of McLaren Racing’s 'Race Operations' framework to non-automotive sectors.",
+        "tech_stack": [
+            "F1 Telemetry",
+            "Data Analytics",
+            "Systems Engineering"
+        ],
+        "thumbnail": "/images/mclaren-thumb.jpg",
+        "links": {
+            "repo": "",
+            "live": ""
+        },
+        "blueprint": {
+            "flow_description": "Data acquisition from high-stakes racing telemetry into cross-domain industrial logic.",
+            "nodes": [
+                {
+                    "id": "1",
+                    "type": "input",
+                    "position": {
+                        "x": 0,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Data Acquisition (F1 Telemetry)",
+                        "details": "Real-time stream of 1000+ data points per second from vehicle sensors."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 220px;"
+                },
+                {
+                    "id": "2",
+                    "type": "default",
+                    "position": {
+                        "x": 300,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Pattern Extraction",
+                        "details": "Identifying high-stakes bottlenecks and recurring failures in the data flow."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "3",
+                    "type": "default",
+                    "position": {
+                        "x": 550,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Algorithmic Mapping",
+                        "details": "Translating racing logic into industrial supply chain or medical diagnostic models."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 200px;"
+                },
+                {
+                    "id": "4",
+                    "type": "default",
+                    "position": {
+                        "x": 800,
+                        "y": 50
+                    },
+                    "data": {
+                        "label": "Logistics/Healthcare Application",
+                        "details": "Deploying the model to optimize real-world critical decision systems."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 220px;"
+                },
+                {
+                    "id": "5",
+                    "type": "output",
+                    "position": {
+                        "x": 800,
+                        "y": 150
+                    },
+                    "data": {
+                        "label": "Efficiency Feedback Loop",
+                        "details": "Iterative refinement of the model based on real-world performance metrics."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 200px;"
+                }
+            ],
+            "edges": [
+                {
+                    "id": "e1-2",
+                    "source": "1",
+                    "target": "2",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e2-3",
+                    "source": "2",
+                    "target": "3",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                },
+                {
+                    "id": "e3-4",
+                    "source": "3",
+                    "target": "4",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e4-5",
+                    "source": "4",
+                    "target": "5",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                }
+            ]
+        }
+    },
+    {
+        "id": "cyber-evolution",
+        "title": "Cyber-Evolution",
+        "role": "Cybersecurity Researcher",
+        "categories": [
+            "Research",
+            "On going"
+        ],
+        "description": "A technical research paper charting the morphological evolution of cybersecurity threats and vulnerability lifecycles.",
+        "tech_stack": [
+            "Cybersecurity",
+            "Threat Modeling",
+            "AI / ML"
+        ],
+        "thumbnail": "/images/cyber-thumb.jpg",
+        "links": {
+            "repo": "",
+            "live": ""
+        },
+        "blueprint": {
+            "flow_description": "Charting the lifecycle of vulnerabilities from discovery to predictive defense modeling.",
+            "nodes": [
+                {
+                    "id": "1",
+                    "type": "input",
+                    "position": {
+                        "x": 0,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Initial Discovery",
+                        "details": "Identification of zero-day or legacy exploits in established systems."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "2",
+                    "type": "default",
+                    "position": {
+                        "x": 250,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Patch Deployment",
+                        "details": "Systemic response to mitigate the vulnerability across affected nodes."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "3",
+                    "type": "default",
+                    "position": {
+                        "x": 500,
+                        "y": 50
+                    },
+                    "data": {
+                        "label": "Attacker Adaptation",
+                        "details": "The morphological shift of the exploit to bypass new defensive measures."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 200px;"
+                },
+                {
+                    "id": "4",
+                    "type": "default",
+                    "position": {
+                        "x": 750,
+                        "y": 50
+                    },
+                    "data": {
+                        "label": "New Vector Emergence",
+                        "details": "Identification of the secondary threat resulting from the initial adaptation."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 200px;"
+                },
+                {
+                    "id": "5",
+                    "type": "output",
+                    "position": {
+                        "x": 750,
+                        "y": 150
+                    },
+                    "data": {
+                        "label": "Predictive Defense Modeling",
+                        "details": "Algorithmically forecasting future exploits based on past evolutionary data."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 220px;"
+                }
+            ],
+            "edges": [
+                {
+                    "id": "e1-2",
+                    "source": "1",
+                    "target": "2",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e2-3",
+                    "source": "2",
+                    "target": "3",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                },
+                {
+                    "id": "e3-4",
+                    "source": "3",
+                    "target": "4",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e4-5",
+                    "source": "4",
+                    "target": "5",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                }
+            ]
+        }
+    },
+    {
+        "id": "vibe-coding",
+        "title": "Vibe Coding",
+        "role": "Methodology Researcher",
+        "categories": [
+            "Research",
+            "On going"
+        ],
+        "description": "A methodology-focused paper defining 'Vibe Coding'—a high-abstraction development paradigm involving Human-AI symbiosis.",
+        "tech_stack": [
+            "LLMs",
+            "Software Architecture",
+            "AI Ethics"
+        ],
+        "thumbnail": "/images/vibe-thumb.jpg",
+        "links": {
+            "repo": "",
+            "live": ""
+        },
+        "blueprint": {
+            "flow_description": "Transforming abstract intent into modular, scalable systems through AI orchestration.",
+            "nodes": [
+                {
+                    "id": "1",
+                    "type": "input",
+                    "position": {
+                        "x": 0,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Conceptual Intent (The Vibe)",
+                        "details": "Defining high-level project goals and aesthetic vision in natural language."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 220px;"
+                },
+                {
+                    "id": "2",
+                    "type": "default",
+                    "position": {
+                        "x": 300,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "AI-Generated Prototype",
+                        "details": "Rapid instantiation of code structures using Large Language Models."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 200px;"
+                },
+                {
+                    "id": "3",
+                    "type": "default",
+                    "position": {
+                        "x": 550,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Human-Led Refinement",
+                        "details": "Architectural oversight and quality auditing of AI outputs."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "4",
+                    "type": "default",
+                    "position": {
+                        "x": 800,
+                        "y": 50
+                    },
+                    "data": {
+                        "label": "Modular Integration",
+                        "details": "Synthesizing individual components into a cohesive, production-ready system."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 220px;"
+                },
+                {
+                    "id": "5",
+                    "type": "output",
+                    "position": {
+                        "x": 800,
+                        "y": 150
+                    },
+                    "data": {
+                        "label": "Continuous Iteration",
+                        "details": "Fast-feedback loops using AI to maintain and scale the existing architecture."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 200px;"
+                }
+            ],
+            "edges": [
+                {
+                    "id": "e1-2",
+                    "source": "1",
+                    "target": "2",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e2-3",
+                    "source": "2",
+                    "target": "3",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                },
+                {
+                    "id": "e3-4",
+                    "source": "3",
+                    "target": "4",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e4-5",
+                    "source": "4",
+                    "target": "5",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
                 }
             ]
         }

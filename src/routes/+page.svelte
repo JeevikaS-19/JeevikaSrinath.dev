@@ -4,10 +4,10 @@
 
   const projects: Project[] = projectsData as Project[];
   
-  const categories = ["Python projects", "Websites", "On going"] as const;
+  const categories = ["Python projects", "Websites", "Research", "On going"] as const;
   let selectedCategory: typeof categories[number] = "Python projects";
 
-  $: filteredProjects = projects.filter(p => p.category === selectedCategory);
+  $: filteredProjects = projects.filter(p => p.categories.includes(selectedCategory));
 </script>
 
 <div class="max-w-7xl mx-auto px-4 py-16">
