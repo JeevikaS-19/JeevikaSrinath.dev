@@ -12,35 +12,7 @@
   const nodes = writable([]);
   const edges = writable([]);
 
-  // Dummy fallback data for testing visibility
-  const DUMMY_NODES = [
-    {
-        id: 'debug-1',
-        type: 'input',
-        data: { label: 'FLOW DEBUGGER' },
-        position: { x: 250, y: 0 },
-        style: 'background: #0d0d0d; border: 1px solid #2a9d8f; color: white;'
-    },
-    {
-        id: 'debug-2',
-        data: { label: 'IF YOU SEE THIS' },
-        position: { x: 100, y: 100 },
-        style: 'background: #0d0d0d; border: 1px dashed #e9c46a; color: white;'
-    },
-    {
-        id: 'debug-3',
-        data: { label: 'DATA LOAD FAILED' },
-        position: { x: 400, y: 100 },
-        style: 'background: #0d0d0d; border: 1px dashed #ef4444; color: white;'
-    }
-  ];
-
-  const DUMMY_EDGES = [
-    { id: 'e1-2', source: 'debug-1', target: 'debug-2', animated: true },
-    { id: 'e1-3', source: 'debug-1', target: 'debug-3', animated: true }
-  ];
-
-  // Reactivity: Update stores or load dummy data
+  // Reactivity: Update stores
   $: {
     if (browser) {
        // Validate and Process Nodes
@@ -55,13 +27,8 @@
 
        // Set Stores
         if (processedNodes.length > 0) {
-            console.log('[FlowEditor] Setting Real Data:', processedNodes.length);
             nodes.set(processedNodes);
             edges.set(edgeData || []);
-        } else {
-            console.log('[FlowEditor] Setting Dummy Data');
-            nodes.set(DUMMY_NODES);
-            edges.set(DUMMY_EDGES);
         }
     }
   }

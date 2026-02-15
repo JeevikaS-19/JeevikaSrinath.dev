@@ -167,9 +167,8 @@
           </div>
 
           <!-- Bottom marker -->
-          <div class="mt-8 pt-4 border-t border-blueprint-grid flex justify-between items-center text-[10px] font-mono text-gray-500 uppercase">
-            <span>Security_Level: Classified</span>
-            <span>Ref_ID: {project.id}-REPORT</span>
+          <div class="mt-8 pt-4 border-t border-blueprint-grid flex justify-end items-center text-[10px] font-mono text-gray-500 uppercase">
+            <span>// END_OF_FILE</span>
           </div>
         </div>
       {/if}
