@@ -1391,5 +1391,106 @@
             ]
         },
         "full_report": "Report 3: The Vibe Coding Audit\nProject Title: The Pseudo-Code Trap: Security Auditing in Intent-Based Development Status: Methodology Development / Best Practices Paper\nFocus: Human-AI Interaction & Secure Engineering\n\n1. Executive Summary\nAs development shifts toward \"Vibe Coding\" (natural language intent), the risk of \"Pseudo-code Traps\" increases. This research audits the security integrity of AI-generated code, focusing on how developers can maintain professional standards while utilizing high-speed AI tools.\n\n2. Research Focus\n* The \"Vibe\" Verification: Designing a verification layer that sits between the LLM output and the production environment.\n* Clean Vibe Checklist: A proprietary set of 12 security checkpoints designed to catch hallucinated vulnerabilities, hardcoded secrets, and inefficient logic before deployment.\n\n3. Methodology (The Flow)\n1. Intent Input: Documenting the \"Prompt to Code\" ratio in modern dev workflows.\n2. Trap Identification: Manually auditing 50+ AI-generated components for common security anti-patterns.\n3. Checklist Integration: Applying the \"Clean Vibe\" filters to the workflow.\n4. Final Validation: Benchmarking the security score of audited code vs. raw AI output."
+    },
+    {
+        "id": "ghostbox",
+        "title": "GhostBox",
+        "role": "Lead Developer & Security Architect",
+        "categories": [
+            "Websites"
+        ],
+        "description": "A hardened, E2E encrypted, Windows 95-inspired chat experience. Features AES-256-GCM encryption, Supabase Realtime synchronization, and a custom Win95-styled UI component engine.",
+        "tech_stack": [
+            "React 19",
+            "TypeScript",
+            "Tailwind CSS",
+            "Supabase Realtime",
+            "Web Crypto API"
+        ],
+        "thumbnail": "/images/ghostbox-thumb.jpg",
+        "links": {
+            "repo": "https://github.com/JeevikaS-19/GhostBox.git",
+            "live": "https://ghost-box-beta.vercel.app/"
+        },
+        "blueprint": {
+            "flow_description": "Encryption handshake and real-time message propagation through Supabase edge nodes.",
+            "nodes": [
+                {
+                    "id": "1",
+                    "type": "input",
+                    "position": {
+                        "x": 0,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Client Handshake",
+                        "details": "Local derivation of AES-256-GCM keys from user-provided passphrase. Keys never leave the browser."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 180px;"
+                },
+                {
+                    "id": "2",
+                    "type": "default",
+                    "position": {
+                        "x": 250,
+                        "y": 50
+                    },
+                    "data": {
+                        "label": "Web Crypto Encryption",
+                        "details": "Converts plain-text messages into encrypted cipher-text using the locally derived initialization vector (IV)."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 200px;"
+                },
+                {
+                    "id": "3",
+                    "type": "default",
+                    "position": {
+                        "x": 550,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Supabase Realtime Sync",
+                        "details": "Broadcasts high-priority cipher-text payloads to authenticated room members over PostgreSQL CDC channels."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #2a9d8f; color: #fff; width: 220px;"
+                },
+                {
+                    "id": "4",
+                    "type": "output",
+                    "position": {
+                        "x": 800,
+                        "y": 100
+                    },
+                    "data": {
+                        "label": "Win95 UI Terminal",
+                        "details": "Renders decrypted streams into a retro-styled chat buffer with CRT scanline overlays."
+                    },
+                    "style": "background: #0d0d0d; border: 1px solid #e9c46a; color: #fff; width: 180px;"
+                }
+            ],
+            "edges": [
+                {
+                    "id": "e1-2",
+                    "source": "1",
+                    "target": "2",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                },
+                {
+                    "id": "e2-3",
+                    "source": "2",
+                    "target": "3",
+                    "animated": true,
+                    "style": "stroke: #e9c46a;"
+                },
+                {
+                    "id": "e3-4",
+                    "source": "3",
+                    "target": "4",
+                    "animated": true,
+                    "style": "stroke: #2a9d8f;"
+                }
+            ]
+        }
     }
 ]
