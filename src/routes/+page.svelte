@@ -21,7 +21,7 @@
             Hello!
         </p>
         <p class="font-sans text-lg md:text-xl text-gray-300 leading-relaxed font-bold">
-            CS student (9.77 CGPA) building at the intersection of <span class="text-white">AI logic</span> and <span class="text-blueprint-blue">Neo-Brutalist design</span>. Whether I’m engineering CV tools in Python or shipping interactive frontends in Svelte, I focus on turning complex ideas into clean, high-impact products.
+            CS student (9.66 CGPA) building at the intersection of <span class="text-white">AI logic</span> and <span class="text-blueprint-blue">Neo-Brutalist design</span>. Whether I’m engineering CV tools in Python or shipping interactive frontends in Svelte, I focus on turning complex ideas into clean, high-impact products.
         </p>
         <p class="font-sans text-sm text-blueprint-blue mt-4 font-bold uppercase tracking-widest">
             Always building, always shipping.
